@@ -1,0 +1,119 @@
+use aiken/hash.{Blake2b_224, Hash}
+use aiken/list
+use aiken/option.{None, Some}
+use aiken/string
+use aiken/time
+use aiken/transaction/credential.{Credential, ScriptCredential, VerifierKeyCredential}
+use aiken/transaction/script_context.{ScriptContext, TxInfo}
+use aiken/transaction/value.{Value, ada}
+use aiken/transaction.{Address, OutputDatum, TxId, TxOutput}
+
+// Import ride booking functionality
+use ./ride_booking.{RideRequest, RideCompletion, ride_booking_validator}
+
+// Vehicle minting policy data structure
+pub type VehicleMintingPolicy {
+  VehicleMintingPolicy {
+    vehicle_owner: Address,
+    vehicle_make: String,
+    vehicle_model: String,
+    vehicle_year: Int,
+    vehicle_vin: String,
+    estimated_value_lovelace: Int,
+    share_price_lovelace: Int,
+    total_shares: Int,
+  }
+}
+
+// Main validator function for vehicle minting
+pub fn vehicle_minting_validator(
+  policy: VehicleMintingPolicy,
+  redeemer: String,
+  context: ScriptContext,
+) -> Bool {
+  let ScriptContext { transaction, .. } = context
+  let TxInfo { inputs, outputs, .. } = transaction
+
+  // Validate that only the vehicle owner can mint
+  validate_vehicle_owner(policy.vehicle_owner, inputs, outputs) &&
+  // Validate that the redeemer is valid
+  validate_redeemer(redeemer) &&
+  // Validate that the minting transaction is properly structured
+  validate_minting_transaction(policy, outputs)
+}
+
+// Validate that the transaction is initiated by the vehicle owner
+fn validate_vehicle_owner(
+  owner_address: Address,
+  inputs: List<TxInput>,
+  outputs: List<TxOutput>,
+) -> Bool {
+  // Check if any input comes from the vehicle owner
+  list.any(inputs, fn(input: TxInput) {
+    input.address == owner_address
+  })
+}
+
+// Validate the redeemer (for now, just check it's not empty)
+fn validate_redeemer(redeemer: String) -> Bool {
+  string.length(redeemer) > 0
+}
+
+// Validate the minting transaction structure
+fn validate_minting_transaction(
+  policy: VehicleMintingPolicy,
+  outputs: List<TxOutput>,
+) -> Bool {
+  // Check that the vehicle owner receives the NFT
+  list.any(outputs, fn(output: TxOutput) {
+    output.address == policy.vehicle_owner
+  })
+}
+
+// Ride booking validator (delegates to the ride_booking module)
+pub fn ryde_ride_validator(
+  ride_request: RideRequest,
+  redeemer: RideCompletion,
+  context: ScriptContext,
+) -> Bool {
+  ride_booking_validator(ride_request, redeemer, context)
+}
+
+// Helper function to create a vehicle minting policy
+pub fn create_vehicle_policy(
+  vehicle_owner: Address,
+  vehicle_make: String,
+  vehicle_model: String,
+  vehicle_year: Int,
+  vehicle_vin: String,
+  estimated_value_lovelace: Int,
+  share_price_lovelace: Int,
+  total_shares: Int,
+) -> VehicleMintingPolicy {
+  VehicleMintingPolicy {
+    vehicle_owner,
+    vehicle_make,
+    vehicle_model,
+    vehicle_year,
+    vehicle_vin,
+    estimated_value_lovelace,
+    share_price_lovelace,
+    total_shares,
+  }
+}
+
+// Helper function to validate vehicle ownership
+pub fn is_vehicle_owner(
+  vehicle_nft_policy: Hash<Blake2b_224>,
+  vehicle_nft_name: String,
+  address: Address,
+  outputs: List<TxOutput>,
+) -> Bool {
+  // Check if the address holds the vehicle NFT
+  list.any(outputs, fn(output: TxOutput) {
+    output.address == address &&
+    // In a real implementation, you'd check for the specific NFT
+    // For PoC, we'll just check if they have any ADA
+    value.ada(output.value) > 0
+  })
+} 

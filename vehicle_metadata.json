@@ -1,0 +1,95 @@
+{
+  "721": {
+    "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
+      "RYDE_NFT_VEHICLE_001": {
+        "name": "RyDe Vehicle #001",
+        "description": "A 2023 Toyota Camry Hybrid for fractional ownership on RyDe platform",
+        "image": "ipfs://QmYourImageHashHere",
+        "files": [
+          {
+            "name": "vehicle_documentation.pdf",
+            "mediaType": "application/pdf",
+            "src": "ipfs://QmYourDocumentHashHere"
+          }
+        ],
+        "attributes": [
+          {
+            "trait_type": "Make",
+            "value": "Toyota"
+          },
+          {
+            "trait_type": "Model", 
+            "value": "Camry Hybrid"
+          },
+          {
+            "trait_type": "Year",
+            "value": 2023
+          },
+          {
+            "trait_type": "VIN",
+            "value": "4T1B11HK5KU123456"
+          },
+          {
+            "trait_type": "Estimated Value",
+            "value": "30000000",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Share Price (ADA)",
+            "value": "1000000",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Total Shares",
+            "value": 30000,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Vehicle Type",
+            "value": "Sedan"
+          },
+          {
+            "trait_type": "Fuel Type",
+            "value": "Hybrid"
+          },
+          {
+            "trait_type": "Color",
+            "value": "Pearl White"
+          },
+          {
+            "trait_type": "Mileage",
+            "value": 15000,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Condition",
+            "value": "Excellent"
+          },
+          {
+            "trait_type": "Service History",
+            "value": "Complete"
+          },
+          {
+            "trait_type": "Insurance Status",
+            "value": "Active"
+          },
+          {
+            "trait_type": "Registration Status",
+            "value": "Current"
+          }
+        ],
+        "ryde_platform": {
+          "vehicle_id": "VEHICLE_001",
+          "fractional_shares_asset": "RYDE_SHARE_VEHICLE_001",
+          "total_shares": 30000,
+          "share_price_lovelace": 1000000,
+          "estimated_value_lovelace": 30000000,
+          "platform_version": "1.0.0",
+          "minting_date": "2025-07-15T08:30:00Z",
+          "governance_rights": "Fractional ownership grants voting rights on platform decisions",
+          "revenue_sharing": "Shareholders receive proportional revenue from ride profits"
+        }
+      }
+    }
+  }
+} 

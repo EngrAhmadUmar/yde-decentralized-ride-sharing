@@ -1,0 +1,26 @@
+# Cardano CLI binaries and libraries
+cardano-cli/
+cardano-node/
+cardano-node-10.4.1-macos/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp 

@@ -1,0 +1,140 @@
+{
+  "721": {
+    "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
+      "RYDE_NFT_BUS_001": {
+        "name": "RyDe Passenger Bus #001",
+        "description": "A 2023 Mercedes-Benz Sprinter for group transportation and shuttle services on RyDe platform",
+        "image": "ipfs://QmYourBusImageHashHere",
+        "files": [
+          {
+            "name": "bus_documentation.pdf",
+            "mediaType": "application/pdf",
+            "src": "ipfs://QmYourBusDocHashHere"
+          }
+        ],
+        "attributes": [
+          {
+            "trait_type": "Make",
+            "value": "Mercedes-Benz"
+          },
+          {
+            "trait_type": "Model", 
+            "value": "Sprinter"
+          },
+          {
+            "trait_type": "Year",
+            "value": 2023
+          },
+          {
+            "trait_type": "VIN",
+            "value": "WD3PE7CC8PJ123456"
+          },
+          {
+            "trait_type": "Estimated Value",
+            "value": "50000000",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Share Price (ADA)",
+            "value": "2000000",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Total Shares",
+            "value": 25000,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Vehicle Type",
+            "value": "Passenger Bus"
+          },
+          {
+            "trait_type": "Fuel Type",
+            "value": "Diesel"
+          },
+          {
+            "trait_type": "Color",
+            "value": "RyDe Blue"
+          },
+          {
+            "trait_type": "Mileage",
+            "value": 25000,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Passenger Capacity",
+            "value": 15,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Condition",
+            "value": "Excellent"
+          },
+          {
+            "trait_type": "Service History",
+            "value": "Complete"
+          },
+          {
+            "trait_type": "Insurance Status",
+            "value": "Active"
+          },
+          {
+            "trait_type": "Registration Status",
+            "value": "Current"
+          },
+          {
+            "trait_type": "Use Case",
+            "value": "Group Transportation & Shuttle Services"
+          },
+          {
+            "trait_type": "Luggage Capacity",
+            "value": "Large"
+          },
+          {
+            "trait_type": "Fuel Efficiency",
+            "value": "8.5L/100km"
+          },
+          {
+            "trait_type": "Wheelchair Accessible",
+            "value": "Yes"
+          },
+          {
+            "trait_type": "Air Conditioning",
+            "value": "Yes"
+          },
+          {
+            "trait_type": "WiFi Available",
+            "value": "Yes"
+          }
+        ],
+        "ryde_platform": {
+          "vehicle_id": "BUS_001",
+          "fractional_shares_asset": "RYDE_SHARE_BUS_001",
+          "total_shares": 25000,
+          "share_price_lovelace": 2000000,
+          "estimated_value_lovelace": 50000000,
+          "platform_version": "1.0.0",
+          "minting_date": "2025-07-15T11:00:00Z",
+          "governance_rights": "Fractional ownership grants voting rights on platform decisions",
+          "revenue_sharing": "Shareholders receive proportional revenue from transportation profits",
+          "transportation_features": {
+            "airport_shuttle": true,
+            "corporate_transport": true,
+            "event_transport": true,
+            "tourist_shuttle": true,
+            "school_transport": false
+          },
+          "amenities": {
+            "wifi": true,
+            "air_conditioning": true,
+            "wheelchair_accessible": true,
+            "luggage_storage": true,
+            "entertainment_system": false
+          },
+          "operational_hours": "6:00 AM - 10:00 PM",
+          "service_areas": "Metropolitan area and surrounding regions"
+        }
+      }
+    }
+  }
+} 

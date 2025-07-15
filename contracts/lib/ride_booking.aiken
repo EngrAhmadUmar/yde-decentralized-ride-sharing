@@ -1,0 +1,136 @@
+use aiken/hash.{Blake2b_224, Hash}
+use aiken/list
+use aiken/option.{None, Some}
+use aiken/string
+use aiken/time
+use aiken/transaction/credential.{Credential, ScriptCredential, VerifierKeyCredential}
+use aiken/transaction/script_context.{ScriptContext, TxInfo}
+use aiken/transaction/value.{Value, ada}
+use aiken/transaction.{Address, OutputDatum, TxId, TxOutput}
+
+// Ride booking request data structure
+pub type RideRequest {
+  RideRequest {
+    rider_address: Address,
+    vehicle_nft_policy: Hash<Blake2b_224>,
+    vehicle_nft_name: String,
+    ride_duration_minutes: Int,
+    ride_fare_lovelace: Int,
+    request_timestamp: Int,
+  }
+}
+
+// Ride completion data structure
+pub type RideCompletion {
+  RideCompletion {
+    ride_request: RideRequest,
+    completion_timestamp: Int,
+    actual_fare_lovelace: Int,
+    driver_address: Address,
+  }
+}
+
+// Platform configuration
+pub const PLATFORM_FEE_PERCENTAGE: Int = 5 // 5% platform fee
+pub const MINIMUM_RIDE_FARE: Int = 1000000 // 1 ADA minimum
+
+// Main validator function
+pub fn ride_booking_validator(
+  ride_request: RideRequest,
+  redeemer: RideCompletion,
+  context: ScriptContext,
+) -> Bool {
+  let ScriptContext { transaction, .. } = context
+  let TxInfo { inputs, outputs, .. } = transaction
+
+  // Validate ride completion
+  validate_ride_completion(ride_request, redeemer, inputs, outputs)
+}
+
+// Validate that the ride was completed and payment was made
+fn validate_ride_completion(
+  request: RideRequest,
+  completion: RideCompletion,
+  inputs: List<TxInput>,
+  outputs: List<TxOutput>,
+) -> Bool {
+  // Check that completion matches request
+  if completion.ride_request != request {
+    False
+  } else {
+    // Check that payment was made to vehicle owner
+    let vehicle_owner_payment = calculate_vehicle_owner_payment(completion.actual_fare_lovelace)
+    let platform_fee = calculate_platform_fee(completion.actual_fare_lovelace)
+    
+    // Verify payment outputs exist
+    verify_payment_outputs(
+      vehicle_owner_payment,
+      platform_fee,
+      completion.driver_address,
+      outputs,
+    )
+  }
+}
+
+// Calculate vehicle owner payment (95% of fare)
+fn calculate_vehicle_owner_payment(total_fare: Int) -> Int {
+  total_fare - calculate_platform_fee(total_fare)
+}
+
+// Calculate platform fee (5% of fare)
+fn calculate_platform_fee(total_fare: Int) -> Int {
+  (total_fare * PLATFORM_FEE_PERCENTAGE) / 100
+}
+
+// Verify that payment outputs are correct
+fn verify_payment_outputs(
+  vehicle_owner_payment: Int,
+  platform_fee: Int,
+  driver_address: Address,
+  outputs: List<TxOutput>,
+) -> Bool {
+  // Check if there's an output to the driver with the correct amount
+  let driver_output = list.find(outputs, fn(output: TxOutput) {
+    output.address == driver_address && 
+    value.ada(output.value) >= vehicle_owner_payment
+  })
+  
+  // For PoC, we'll just check that the total outputs cover the expected payments
+  let total_output_ada = list.fold(outputs, 0, fn(total: Int, output: TxOutput) {
+    total + value.ada(output.value)
+  })
+  
+  total_output_ada >= (vehicle_owner_payment + platform_fee)
+}
+
+// Helper function to create a ride request
+pub fn create_ride_request(
+  rider_address: Address,
+  vehicle_nft_policy: Hash<Blake2b_224>,
+  vehicle_nft_name: String,
+  ride_duration_minutes: Int,
+  ride_fare_lovelace: Int,
+) -> RideRequest {
+  RideRequest {
+    rider_address,
+    vehicle_nft_policy,
+    vehicle_nft_name,
+    ride_duration_minutes,
+    ride_fare_lovelace,
+    request_timestamp: time.now(),
+  }
+}
+
+// Helper function to complete a ride
+pub fn complete_ride(
+  ride_request: RideRequest,
+  actual_fare_lovelace: Int,
+  driver_address: Address,
+) -> RideCompletion {
+  RideCompletion {
+    ride_request,
+    completion_timestamp: time.now(),
+    actual_fare_lovelace,
+    driver_address,
+  }
+} 
