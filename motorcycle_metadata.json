@@ -1,0 +1,120 @@
+{
+  "721": {
+    "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
+      "RYDE_NFT_MOTORCYCLE_001": {
+        "name": "RyDe Delivery Motorcycle #001",
+        "description": "A 2024 Honda CB300R for food and package delivery services on RyDe platform",
+        "image": "ipfs://QmYourMotorcycleImageHashHere",
+        "files": [
+          {
+            "name": "motorcycle_documentation.pdf",
+            "mediaType": "application/pdf",
+            "src": "ipfs://QmYourMotorcycleDocHashHere"
+          }
+        ],
+        "attributes": [
+          {
+            "trait_type": "Make",
+            "value": "Honda"
+          },
+          {
+            "trait_type": "Model", 
+            "value": "CB300R"
+          },
+          {
+            "trait_type": "Year",
+            "value": 2024
+          },
+          {
+            "trait_type": "VIN",
+            "value": "MLHNC300R4K123456"
+          },
+          {
+            "trait_type": "Estimated Value",
+            "value": "8000000",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Share Price (ADA)",
+            "value": "500000",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Total Shares",
+            "value": 16000,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Vehicle Type",
+            "value": "Motorcycle"
+          },
+          {
+            "trait_type": "Fuel Type",
+            "value": "Gasoline"
+          },
+          {
+            "trait_type": "Color",
+            "value": "Pearl White"
+          },
+          {
+            "trait_type": "Mileage",
+            "value": 5000,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Engine Size",
+            "value": "300cc"
+          },
+          {
+            "trait_type": "Condition",
+            "value": "Excellent"
+          },
+          {
+            "trait_type": "Service History",
+            "value": "Complete"
+          },
+          {
+            "trait_type": "Insurance Status",
+            "value": "Active"
+          },
+          {
+            "trait_type": "Registration Status",
+            "value": "Current"
+          },
+          {
+            "trait_type": "Use Case",
+            "value": "Food & Package Delivery"
+          },
+          {
+            "trait_type": "Delivery Capacity",
+            "value": "Up to 50kg"
+          },
+          {
+            "trait_type": "Fuel Efficiency",
+            "value": "3.5L/100km"
+          }
+        ],
+        "ryde_platform": {
+          "vehicle_id": "MOTORCYCLE_001",
+          "fractional_shares_asset": "RYDE_SHARE_MOTORCYCLE_001",
+          "total_shares": 16000,
+          "share_price_lovelace": 500000,
+          "estimated_value_lovelace": 8000000,
+          "platform_version": "1.0.0",
+          "minting_date": "2025-07-15T10:00:00Z",
+          "governance_rights": "Fractional ownership grants voting rights on platform decisions",
+          "revenue_sharing": "Shareholders receive proportional revenue from delivery profits",
+          "delivery_features": {
+            "food_delivery": true,
+            "package_delivery": true,
+            "express_delivery": true,
+            "cold_storage": false,
+            "large_packages": false
+          },
+          "operational_hours": "24/7",
+          "service_areas": "Urban and suburban zones"
+        }
+      }
+    }
+  }
+} 

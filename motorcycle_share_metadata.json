@@ -1,0 +1,102 @@
+{
+  "721": {
+    "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
+      "RYDE_SHARE_MOTORCYCLE_001": {
+        "name": "RyDe Motorcycle #001 Share Token",
+        "description": "Fractional ownership share of a 2024 Honda CB300R delivery motorcycle on the RyDe platform",
+        "image": "ipfs://QmYourMotorcycleShareImageHashHere",
+        "files": [
+          {
+            "name": "motorcycle_share_certificate.pdf",
+            "mediaType": "application/pdf",
+            "src": "ipfs://QmYourMotorcycleCertificateHashHere"
+          }
+        ],
+        "attributes": [
+          {
+            "trait_type": "Token Type",
+            "value": "Fractional Ownership Share"
+          },
+          {
+            "trait_type": "Vehicle Reference",
+            "value": "RYDE_NFT_MOTORCYCLE_001"
+          },
+          {
+            "trait_type": "Share Price (ADA)",
+            "value": "0.5",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Total Supply",
+            "value": 16000,
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Vehicle Make",
+            "value": "Honda"
+          },
+          {
+            "trait_type": "Vehicle Model",
+            "value": "CB300R"
+          },
+          {
+            "trait_type": "Vehicle Year",
+            "value": 2024
+          },
+          {
+            "trait_type": "Estimated Vehicle Value (ADA)",
+            "value": "8000",
+            "display_type": "number"
+          },
+          {
+            "trait_type": "Revenue Sharing",
+            "value": "Proportional to share ownership"
+          },
+          {
+            "trait_type": "Voting Rights",
+            "value": "Yes"
+          },
+          {
+            "trait_type": "Platform",
+            "value": "RyDe"
+          },
+          {
+            "trait_type": "Asset Class",
+            "value": "Real World Asset (RWA)"
+          },
+          {
+            "trait_type": "Use Case",
+            "value": "Food & Package Delivery"
+          },
+          {
+            "trait_type": "Delivery Capacity",
+            "value": "Up to 50kg"
+          },
+          {
+            "trait_type": "Operational Hours",
+            "value": "24/7"
+          }
+        ],
+        "ryde_platform": {
+          "token_type": "fractional_ownership_share",
+          "vehicle_nft_reference": "RYDE_NFT_MOTORCYCLE_001",
+          "share_price_lovelace": 500000,
+          "total_shares": 16000,
+          "platform_version": "1.0.0",
+          "minting_date": "2025-07-15T10:30:00Z",
+          "governance_rights": "Shareholders can vote on platform decisions",
+          "revenue_sharing": "Proportional distribution of delivery profits",
+          "liquidity_pool": "Shares can be traded on RyDe marketplace",
+          "legal_structure": "Fractional ownership compliant with local regulations",
+          "delivery_services": {
+            "food_delivery": true,
+            "package_delivery": true,
+            "express_delivery": true,
+            "commission_rate": "15%",
+            "average_delivery_fee": "5 ADA"
+          }
+        }
+      }
+    }
+  }
+} 
