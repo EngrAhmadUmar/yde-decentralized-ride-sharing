@@ -3,7 +3,7 @@
     "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
       "RYDE_NFT_BUS_001": {
         "name": "RyDe Passenger Bus #001",
-        "description": "A 2023 Mercedes-Benz Sprinter for group transportation and shuttle services on RyDe platform",
+        "description": "A 2023 Mercedes-Benz Sprinter for group transportation and shuttle services on RyDe platform (custodial)",
         "image": "ipfs://QmYourBusImageHashHere",
         "files": [
           {
@@ -30,12 +30,12 @@
             "value": "WD3PE7CC8PJ123456"
           },
           {
-            "trait_type": "Estimated Value",
+            "trait_type": "Estimated Value (DJED)",
             "value": "50000000",
             "display_type": "number"
           },
           {
-            "trait_type": "Share Price (ADA)",
+            "trait_type": "Share Price (DJED)",
             "value": "2000000",
             "display_type": "number"
           },
@@ -105,18 +105,28 @@
           {
             "trait_type": "WiFi Available",
             "value": "Yes"
+          },
+          {
+            "trait_type": "Custodial",
+            "value": true
+          },
+          {
+            "trait_type": "Held By",
+            "value": "RyDe Platform"
           }
         ],
         "ryde_platform": {
           "vehicle_id": "BUS_001",
           "fractional_shares_asset": "RYDE_SHARE_BUS_001",
           "total_shares": 25000,
-          "share_price_lovelace": 2000000,
-          "estimated_value_lovelace": 50000000,
+          "share_price_stablecoin": 2000000,
+          "estimated_value_stablecoin": 50000000,
           "platform_version": "1.0.0",
           "minting_date": "2025-07-15T11:00:00Z",
           "governance_rights": "Fractional ownership grants voting rights on platform decisions",
           "revenue_sharing": "Shareholders receive proportional revenue from transportation profits",
+          "custodial": true,
+          "held_by": "RyDe Platform",
           "transportation_features": {
             "airport_shuttle": true,
             "corporate_transport": true,

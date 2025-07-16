@@ -3,7 +3,7 @@
     "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
       "RYDE_SHARE_MOTORCYCLE_001": {
         "name": "RyDe Motorcycle #001 Share Token",
-        "description": "Fractional ownership share of a 2024 Honda CB300R delivery motorcycle on the RyDe platform",
+        "description": "Fractional ownership share of a 2024 Honda CB300R delivery motorcycle on the RyDe platform (custodial)",
         "image": "ipfs://QmYourMotorcycleShareImageHashHere",
         "files": [
           {
@@ -22,7 +22,7 @@
             "value": "RYDE_NFT_MOTORCYCLE_001"
           },
           {
-            "trait_type": "Share Price (ADA)",
+            "trait_type": "Share Price (DJED)",
             "value": "0.5",
             "display_type": "number"
           },
@@ -44,7 +44,7 @@
             "value": 2024
           },
           {
-            "trait_type": "Estimated Vehicle Value (ADA)",
+            "trait_type": "Estimated Vehicle Value (DJED)",
             "value": "8000",
             "display_type": "number"
           },
@@ -75,12 +75,20 @@
           {
             "trait_type": "Operational Hours",
             "value": "24/7"
+          },
+          {
+            "trait_type": "Custodial",
+            "value": true
+          },
+          {
+            "trait_type": "Held By",
+            "value": "RyDe Platform"
           }
         ],
         "ryde_platform": {
           "token_type": "fractional_ownership_share",
           "vehicle_nft_reference": "RYDE_NFT_MOTORCYCLE_001",
-          "share_price_lovelace": 500000,
+          "share_price_stablecoin": 500000,
           "total_shares": 16000,
           "platform_version": "1.0.0",
           "minting_date": "2025-07-15T10:30:00Z",
@@ -88,12 +96,14 @@
           "revenue_sharing": "Proportional distribution of delivery profits",
           "liquidity_pool": "Shares can be traded on RyDe marketplace",
           "legal_structure": "Fractional ownership compliant with local regulations",
+          "custodial": true,
+          "held_by": "RyDe Platform",
           "delivery_services": {
             "food_delivery": true,
             "package_delivery": true,
             "express_delivery": true,
             "commission_rate": "15%",
-            "average_delivery_fee": "5 ADA"
+            "average_delivery_fee": "5 DJED"
           }
         }
       }
