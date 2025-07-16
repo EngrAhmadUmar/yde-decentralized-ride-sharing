@@ -30,12 +30,12 @@
             "value": "WD3PE7CC8PJ123456"
           },
           {
-            "trait_type": "Estimated Value (DJED)",
+            "trait_type": "Estimated Value",
             "value": "50000000",
             "display_type": "number"
           },
           {
-            "trait_type": "Share Price (DJED)",
+            "trait_type": "Share Price (ADA)",
             "value": "2000000",
             "display_type": "number"
           },

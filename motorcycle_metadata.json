@@ -3,7 +3,7 @@
     "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
       "RYDE_NFT_MOTORCYCLE_001": {
         "name": "RyDe Delivery Motorcycle #001",
-        "description": "A 2024 Honda CB300R for food and package delivery services on RyDe platform (custodial)",
+        "description": "A 2024 Honda CB300R for food and package delivery services on RyDe platform",
         "image": "ipfs://QmYourMotorcycleImageHashHere",
         "files": [
           {
@@ -30,12 +30,12 @@
             "value": "MLHNC300R4K123456"
           },
           {
-            "trait_type": "Estimated Value (DJED)",
+            "trait_type": "Estimated Value",
             "value": "8000000",
             "display_type": "number"
           },
           {
-            "trait_type": "Share Price (DJED)",
+            "trait_type": "Share Price (ADA)",
             "value": "500000",
             "display_type": "number"
           },
@@ -106,8 +106,8 @@
           "vehicle_id": "MOTORCYCLE_001",
           "fractional_shares_asset": "RYDE_SHARE_MOTORCYCLE_001",
           "total_shares": 16000,
-          "share_price_stablecoin": 500000,
-          "estimated_value_stablecoin": 8000000,
+          "share_price_lovelace": 500000,
+          "estimated_value_lovelace": 8000000,
           "platform_version": "1.0.0",
           "minting_date": "2025-07-15T10:00:00Z",
           "governance_rights": "Fractional ownership grants voting rights on platform decisions",

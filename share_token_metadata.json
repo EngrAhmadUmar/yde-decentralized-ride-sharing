@@ -3,7 +3,7 @@
     "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
       "RYDE_SHARE_VEHICLE_001": {
         "name": "RyDe Vehicle #001 Share Token",
-        "description": "Fractional ownership share of a 2023 Toyota Camry Hybrid on the RyDe platform (custodial)",
+        "description": "Fractional ownership share of a 2023 Toyota Camry Hybrid on the RyDe platform",
         "image": "ipfs://QmYourShareTokenImageHashHere",
         "files": [
           {
@@ -22,7 +22,7 @@
             "value": "RYDE_NFT_VEHICLE_001"
           },
           {
-            "trait_type": "Share Price (DJED)",
+            "trait_type": "Share Price (ADA)",
             "value": "1",
             "display_type": "number"
           },
@@ -44,7 +44,7 @@
             "value": 2023
           },
           {
-            "trait_type": "Estimated Vehicle Value (DJED)",
+            "trait_type": "Estimated Vehicle Value (ADA)",
             "value": "30000",
             "display_type": "number"
           },
@@ -76,16 +76,14 @@
         "ryde_platform": {
           "token_type": "fractional_ownership_share",
           "vehicle_nft_reference": "RYDE_NFT_VEHICLE_001",
-          "share_price_stablecoin": 1000000,
+          "share_price_lovelace": 1000000,
           "total_shares": 30000,
           "platform_version": "1.0.0",
           "minting_date": "2025-07-15T09:00:00Z",
           "governance_rights": "Shareholders can vote on platform decisions",
           "revenue_sharing": "Proportional distribution of ride profits",
           "liquidity_pool": "Shares can be traded on RyDe marketplace",
-          "legal_structure": "Fractional ownership compliant with local regulations",
-          "custodial": true,
-          "held_by": "RyDe Platform"
+          "legal_structure": "Fractional ownership compliant with local regulations"
         }
       }
     }

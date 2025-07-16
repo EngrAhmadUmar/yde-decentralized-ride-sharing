@@ -3,7 +3,7 @@
     "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
       "RYDE_NFT_VEHICLE_001": {
         "name": "RyDe Vehicle #001",
-        "description": "A 2023 Toyota Camry Hybrid for fractional ownership on RyDe platform (custodial)",
+        "description": "A 2023 Toyota Camry Hybrid for fractional ownership on RyDe platform",
         "image": "ipfs://QmYourImageHashHere",
         "files": [
           {
@@ -30,12 +30,12 @@
             "value": "4T1B11HK5KU123456"
           },
           {
-            "trait_type": "Estimated Value (DJED)",
+            "trait_type": "Estimated Value",
             "value": "30000000",
             "display_type": "number"
           },
           {
-            "trait_type": "Share Price (DJED)",
+            "trait_type": "Share Price (ADA)",
             "value": "1000000",
             "display_type": "number"
           },
@@ -76,28 +76,18 @@
           {
             "trait_type": "Registration Status",
             "value": "Current"
-          },
-          {
-            "trait_type": "Custodial",
-            "value": true
-          },
-          {
-            "trait_type": "Held By",
-            "value": "RyDe Platform"
           }
         ],
         "ryde_platform": {
           "vehicle_id": "VEHICLE_001",
           "fractional_shares_asset": "RYDE_SHARE_VEHICLE_001",
           "total_shares": 30000,
-          "share_price_stablecoin": 1000000,
-          "estimated_value_stablecoin": 30000000,
+          "share_price_lovelace": 1000000,
+          "estimated_value_lovelace": 30000000,
           "platform_version": "1.0.0",
           "minting_date": "2025-07-15T08:30:00Z",
           "governance_rights": "Fractional ownership grants voting rights on platform decisions",
-          "revenue_sharing": "Shareholders receive proportional revenue from ride profits",
-          "custodial": true,
-          "held_by": "RyDe Platform"
+          "revenue_sharing": "Shareholders receive proportional revenue from ride profits"
         }
       }
     }

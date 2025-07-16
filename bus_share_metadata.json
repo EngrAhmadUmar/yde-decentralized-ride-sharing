@@ -3,7 +3,7 @@
     "41e0e80d13468b1cb2362d20dd81e789c605a87fc77cecc037cd3c7a": {
       "RYDE_SHARE_BUS_001": {
         "name": "RyDe Bus #001 Share Token",
-        "description": "Fractional ownership share of a 2023 Mercedes-Benz Sprinter passenger bus on the RyDe platform (custodial)",
+        "description": "Fractional ownership share of a 2023 Mercedes-Benz Sprinter passenger bus on the RyDe platform",
         "image": "ipfs://QmYourBusShareImageHashHere",
         "files": [
           {
@@ -22,7 +22,7 @@
             "value": "RYDE_NFT_BUS_001"
           },
           {
-            "trait_type": "Share Price (DJED)",
+            "trait_type": "Share Price (ADA)",
             "value": "2",
             "display_type": "number"
           },
@@ -44,7 +44,7 @@
             "value": 2023
           },
           {
-            "trait_type": "Estimated Vehicle Value (DJED)",
+            "trait_type": "Estimated Vehicle Value (ADA)",
             "value": "50000",
             "display_type": "number"
           },
@@ -76,20 +76,12 @@
           {
             "trait_type": "Operational Hours",
             "value": "6:00 AM - 10:00 PM"
-          },
-          {
-            "trait_type": "Custodial",
-            "value": true
-          },
-          {
-            "trait_type": "Held By",
-            "value": "RyDe Platform"
           }
         ],
         "ryde_platform": {
           "token_type": "fractional_ownership_share",
           "vehicle_nft_reference": "RYDE_NFT_BUS_001",
-          "share_price_stablecoin": 2000000,
+          "share_price_lovelace": 2000000,
           "total_shares": 25000,
           "platform_version": "1.0.0",
           "minting_date": "2025-07-15T11:30:00Z",
@@ -97,15 +89,13 @@
           "revenue_sharing": "Proportional distribution of transportation profits",
           "liquidity_pool": "Shares can be traded on RyDe marketplace",
           "legal_structure": "Fractional ownership compliant with local regulations",
-          "custodial": true,
-          "held_by": "RyDe Platform",
           "transportation_services": {
             "airport_shuttle": true,
             "corporate_transport": true,
             "event_transport": true,
             "tourist_shuttle": true,
             "commission_rate": "20%",
-            "average_trip_fee": "25 DJED"
+            "average_trip_fee": "25 ADA"
           }
         }
       }
